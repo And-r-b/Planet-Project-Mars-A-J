@@ -13,3 +13,5 @@
 [Bildet av Rakkett som tar av](https://pixabay.com/photos/rocket-launch-spacex-lift-off-693192/)
 
 [Astronaut går på månen](https://pixabay.com/photos/astronaut-moon-landing-apollo-11-60582/)
+
+[NASA Kentucky Space Center](https://pixabay.com/photos/nasa-usa-kennedy-space-center-621411/)
