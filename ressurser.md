@@ -11,3 +11,5 @@
 [Bildet a Mars](https://pixabay.com/photos/mars-red-planet-planet-space-11012/)
 
 [Bildet av Rakkett som tar av](https://pixabay.com/photos/rocket-launch-spacex-lift-off-693192/)
+
+[Astronaut går på månen](https://pixabay.com/photos/astronaut-moon-landing-apollo-11-60582/)
