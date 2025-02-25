@@ -9,3 +9,5 @@
 [Mars Rover](https://pixabay.com/photos/mars-mars-rover-space-travel-rover-67522/)
 
 [Bildet a Mars](https://pixabay.com/photos/mars-red-planet-planet-space-11012/)
+
+[Bildet av Rakkett som tar av](https://pixabay.com/photos/rocket-launch-spacex-lift-off-693192/)
