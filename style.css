@@ -1,0 +1,23 @@
+body, html {
+    background-color: darkslategrey;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.forside {
+   
+}
+
+.informasjonside {
+
+}
+
+.bildegalleri {
+
+}
