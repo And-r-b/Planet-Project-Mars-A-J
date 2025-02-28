@@ -27,7 +27,12 @@ img {
     height: auto;
 }
 
+.forside, .informasjonside ,.bildegalleri, footer {
+    text-align: center;
+}
+
 .forside {
+
    
 }
 
