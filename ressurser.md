@@ -15,3 +15,5 @@
 [Astronaut går på månen](https://pixabay.com/photos/astronaut-moon-landing-apollo-11-60582/)
 
 [NASA Kentucky Space Center](https://pixabay.com/photos/nasa-usa-kennedy-space-center-621411/)
+
+[Informasjon av Mars: Wikipedia](https://no.wikipedia.org/wiki/Mars_(planet))
