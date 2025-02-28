@@ -17,3 +17,5 @@
 [NASA Kentucky Space Center](https://pixabay.com/photos/nasa-usa-kennedy-space-center-621411/)
 
 [Informasjon om Mars: Wikipedia](https://no.wikipedia.org/wiki/Mars_(planet))
+
+[Informasjon om Mars: Illustrert Vitenskap](https://illvit.no/universet/solsystemet/mars)
