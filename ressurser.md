@@ -19,3 +19,7 @@
 [Informasjon om Mars: Wikipedia](https://no.wikipedia.org/wiki/Mars_(planet))
 
 [Informasjon om Mars: Illustrert Vitenskap](https://illvit.no/universet/solsystemet/mars)
+
+[Informasjon om Mars Rover Spirit and Opportunity](https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/)
+
+[Informasjon om Elon Musk about Mars](https://www.spacex.com/humanspaceflight/mars/)
