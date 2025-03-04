@@ -114,6 +114,15 @@ section div div.text {
 	border-radius: 5px;
 }
 
+section div div.pictures div.image div {
+	width: 100%;
+	height: fit-content;
+	font-size: 10px;
+	backdrop-filter: brightness(40%);
+	position: absolute;
+	bottom: 0;
+}
+
 section div div h3 {
 	margin: 10px 0px;
 }
@@ -129,15 +138,6 @@ section div div ul {
 
 section div div ul li {
 	margin: 5px 15px;
-}
-
-section div div.pictures div.image div {
-	width: 100%;
-	height: fit-content;
-	font-size: 10px;
-	backdrop-filter: brightness(40%);
-	position: absolute;
-	bottom: 0;
 }
 
 /*
@@ -158,6 +158,14 @@ Front-page specifics
 	backdrop-filter: brightness(70%);
 	border-radius: 5px;
 	padding: 5px;
+}
+
+/*
+Facts specifics
+*/
+
+section div div.text {
+	width: 100%;
 }
 
 /*
