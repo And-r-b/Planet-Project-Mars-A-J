@@ -33,12 +33,54 @@
 	<section id="info-section" name="Info">
 		<div>
 			<div class="text">
-				<p>Mars is the fourth planet from the Sun counting outwards, and the second-to-smallest. It is a rock planet, and gets its distinctive red colour from oxidized iron which covers nearly all of its surface.</p>
-				<p>Its modern name comes from the Roman god of war, likely due to its colour which is easily associated with blood. Being easily visible in the sky, however, its motion is attested to have been observed and recorded by the ancient Egyptians more than 4000 years ago (over a thousand years before the founding of Rome). The Babylonians as well, around 600 BC, themselves presumably making note of its colour, associated it with the god of war, death and decease, Nergal. They also made systematic observations of its orbit, even inventing mathematical techniques to compute corrections to the predicted orbit.</p>
+				<p>Mars is the fourth planet from the Sun counting outwards, and the second-to-smallest. It is a rock planet, and gets its distinctive colour from oxidized iron which covers nearly all of its surface and goes out into the atmosphere.</p>
+				<p>Its modern name comes from the Roman god of war, likely due to its colour being easily associated with blood. Being easily visible and recognizable in the sky, however, its motion is attested to have been observed and recorded by the ancient Egyptians more than 4000 years ago (over a thousand years before the founding of Rome). The Babylonians as well, around 600 BC, themselves presumably making note of its colour, associated it with the god of war, death and decease, Nergal. They also made systematic observations of its orbit, even inventing mathematical techniques to compute corrections to the predicted orbit.</p>
 				<p>After the Danish astronomer Tycho Brahe made more detailed measurements of the movement of Mars than had been done previously, his assistant Johannes Kepler used the data to infer that the planet moved in an elliptical orbit around the Sun. He also suggested that other planets did the same, and was furthermore able to formulate his three laws of planetary motion. Isaac Newton, in his magnitudal <i>Principia</i>, confirmed that these laws followed from his own three laws of motion, combined with his law of gravitation.</p>
+				<p>Although the prospect of intelligent life on Mars is far-fetched, the concept of the "Martian" is a staple of the science fiction genre. In his celebrated <i>War of the Worlds</i>, in which conquest-minded extra-terrestrials come to Earth and commence a mass-slaughter of humans and the English, HG Wells chose Mars as their planet of origin. His reason was two-fold: Mars is the planet most similar to Earth (for all it's worth), and is thus the second-most likely planet on which life may have appeared; and in Wells' time, it was thought that Mars was older than the Earth, and so more advanced civilizations would have had time to develop and technologically prepare for outward expansion. As the second fact at least has been proven false, it now seems certain that any alien invasion of Earth will have to be conducted by a race originating in an altogether different Solar system, if not different galaxy. Nonetheless, the "Martians" have come down to stay, and have since birthed a galore of other alien races, hostile or friendly, in the minds of the creative.</p>
 			</div>
-			<div>
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur eum, vero sequi provident aliquid, dolore quia rem ut ea quo necessitatibus et autem earum voluptates consequuntur ducimus, quidem repudiandae optio.
+			<div id="info-pics" class="pictures">
+				<div class="image"><div>Rover on the surface (stylized)</div></div>
+				<div class="image"><div>Mars, and others, visible in the sky. (WDBJ7)</div></div>
+				<div class="image"><div>Mars in profile</div></div>
+				<script language="javascript">
+
+					let imgURLs = [
+						"./rover.jpg",
+						"./marsinthesky_wdbj7.avif",
+						"./justmars.jpg"
+					]
+
+					for (let [i, url] of imgURLs.entries()) {
+						let imgDiv = document.getElementById("info-pics").children[i];
+						imgDiv.style.backgroundImage = `url(${url})`;
+						imgDiv.style.backgroundSize = "cover";
+						imgDiv.style.backgroundPosition = "center center";
+						imgDiv.style.position = "absolute";
+						imgDiv.style.borderRadius = "5px";
+						imgDiv.style.overflow = "hidden";
+						switch (i) {
+							case 0:
+								imgDiv.style.width = "220px";
+								imgDiv.style.height = "200px"
+								imgDiv.style.top = "10";
+								imgDiv.style.left = "760";
+								break;
+							case 1:
+								imgDiv.style.width = "450px";
+								imgDiv.style.height = "180px"
+								imgDiv.style.top = "220";
+								imgDiv.style.left = "520";
+								break;
+							case 2:
+								imgDiv.style.width = "210px";
+								imgDiv.style.height = "210px";
+								imgDiv.style.top = "0";
+								imgDiv.style.left = "510";
+								break;
+						}
+					}
+
+				</script>
 			</div>
 		</div>
 	</section>
@@ -47,14 +89,15 @@
 			<div class="text">
 				<ul>
 					<li>Mars was formed approximately 4.5 billion years ago, at the same time as the other planets of the solar system. It is one of four planets of the Solar System classified as a terrestrial (rocky) planet (along with Mercury, Venus and Earth);</li>
-					<li>Its diameter is around 6,800 km, roughly half that of the Earth's (about 12,800 km). It is the second smallest planet overall (the smallest is Mercury, with a diameter of 4,900 km);</li>
-					<li>Its atmosphere is thin, and consists of 95% carbondioxide, about 3% nitrogen gas, and about 2% argon, with trace amounts of other gases, including oxygen and water vapour;</li>
-					<li>The distinct orange-red colour is from dust of iron(III) oxide, which covers the surface and also floats in the atmosphere;</li>
+					<li>Its diameter is around 6,800 km, roughly half that of the Earth (about 12,800 km). It is the second smallest planet overall (the smallest is Mercury, with a diameter of 4,900 km);</li>
+					<li>Its atmosphere is thin, with only about one percent of the Earth's atmospheric pressure at ground level, and consists of 95% carbondioxide, about 3% nitrogen gas, and about 2% argon, with trace amounts of other gases, including oxygen and water vapour;</li>
+					<li>The distinct orange-red colour stems from dust of iron(III) oxide which covers the surface and also floats in the atmosphere;</li>
 					<li>While its core was still molten, Mars did possess a magnetosphere, which protected from solar winds and cosmic rays. This allowed for an atmosphere to form and to remain, and it is evident from geological formations that running water has been present on Mars, even for long enough time for hydraulic erosion to take place;</li>
-					<li>The magnetosphere eventually dissipated, over a period of 50,000 years, and is now only evident from scattered pockets of strong magnetic fields. Having lost this protection from outside forces, the atmosphere was eventually swept away into space;</li>
-					<li>The surface temperature on Mars ranges between about +20&deg;C and -150&deg;C ( the numbers depend on longitude), as the atmosphere is too thin to maintain temperature and allows the heat from the Sun to escape. Thus, although the ratio of carbondioxide is much greater than in the Earth's atmosphere (0.043%), Mars' atmosphere is not dense enough for any significant greenhouse effect to take place;</li>
+					<li>As the core hardened, the magnetosphere eventually dissipated over a period of 50,000 years, and is now only evident from scattered pockets of strong magnetic fields. Having lost this protection from outside forces, the atmosphere was eventually swept away into space;</li>
+					<li>The surface temperature on Mars ranges between about +20&deg;C and -150&deg;C (the numbers depend on longitude), as the atmosphere is too thin to maintain temperature and allows the heat from the Sun to escape. Thus, although the ratio of carbondioxide is much greater than in the Earth's atmosphere (0.043%), Mars' atmosphere is not dense enough for any significant greenhouse effect to take place;</li>
 					<li>Mars has two moons, Phobos and Deimos. Of relatively small size, Phobos is 27 km at the longest, while Deimos is 12 km in diameter (for comparison, the Earth's moon is nearly 3.500 km in diameter); it is possible that they were originally passing asteroids, which were subsequently caught by Mars' gravitational pull and went into orbit;</li>
 					<li>Mars has probably the tallest mountain in the solar system, Olympus Mons, which stands 24 km tall and is in actuality a volcano;</li>
+					<li>The atmosphere persistently contains detectable amounts of methane. As this is broken down by solar rays, there has to be a source which more or less continuously produces and releases it. The source is likely volcanic, but also speculated to be biological, say decaying organic matter (which incidentally is the most significant source of methane on Earth).</li>
 				</ul>
 			</div>
 			<div>
@@ -63,8 +106,11 @@
 		</div>
 	</section>
 	<section id="gallery-section" name="Gallery">
-		<h2>Gallery</h2>
-		<p>This is the gallery section</p>
+		<div>
+			<div class="gallery-entry">
+
+			</div>
+		</div>
 	</section>
 </body>
 </html>

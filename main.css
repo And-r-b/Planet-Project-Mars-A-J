@@ -82,15 +82,17 @@ section {
 	justify-content: center;
 }
 
+section>* {
+	transform: translateY(10%);
+}
+
 section div {
 	width: 1000px;
-	height: fit-content;
-	height: 60%;
+	height: 75%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
-	flex: 1 1 0px;
 	gap: 10px;
 }
 
@@ -98,8 +100,9 @@ section div div {
 	font-family: "Play Regular";
 	display: flex;
 	flex-direction: column;
+	height: 100%;
 	gap: 10px;
-	justify-content: space-between;
+	justify-content: flex-start;
 	overflow-y: scroll;
 	scroll-behavior: smooth;
 	scrollbar-width: none;
@@ -128,6 +131,15 @@ section div div ul li {
 	margin: 5px 15px;
 }
 
+section div div.pictures div.image div {
+	width: 100%;
+	height: fit-content;
+	font-size: 10px;
+	backdrop-filter: brightness(40%);
+	position: absolute;
+	bottom: 0;
+}
+
 /*
 Front-page specifics
 */
@@ -149,5 +161,20 @@ Front-page specifics
 }
 
 /*
-Info section
+Gallery specifics
 */
+
+section#gallery-section div {
+	width: 800;
+	height: 75%;
+	border-radius: 5px;
+	backdrop-filter: brightness(40%);
+}
+
+section#gallery-section div div.gallery-entry {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
