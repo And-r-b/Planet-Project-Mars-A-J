@@ -169,22 +169,25 @@
 			let gallery = document.getElementById("gallery-section").children[0];
 
 			[
-				"./withpolaricecaps.jpg",
-				"./surface.jpg",
-				"./craterhydratedminerals.png",
-				"./olympusmons.png",
-				"./marscoral.jpg",
-				"./curiosity.png",
-				"./perseverance.png",
-				"./spacexlaunch.png",
-				"./colony.jpg",
-				"./martian.png"
-			].forEach((url, i) => {
+				[ "./withpolaricecaps.jpg", 		"Mars from space, with polar ice cap visible." ],
+				["./surface.jpg", 					"The surface of Mars." ],
+				["./craterhydratedminerals.png", 	"A crater, reportedly containing hydrated minerals." ],
+				[ "./olympusmons.png", 				"Olympus Mons." ],
+				[ "./marscoral.jpg", 				"A coral rock formation" ],
+				[ "./curiosity.png", 				"Curiosity Rover" ],
+				[ "./perseverance.png", 			"Perseverance Rover" ],
+				[ "./spacexlaunch.png", 			"SpaceX launch" ],
+				[ "./colony.jpg", 					"Artist's rendition of a Martian colony" ],
+				[ "./martian.png", 					"Illustration from 'War of the Worlds'." ]
+			].forEach((arr, i) => {
 				let entry = document.createElement("div");
 				entry.className = "gallery-entry";
-				entry.style.backgroundImage = `url("${url}")`;
+				entry.style.backgroundImage = `url("${arr[0]}")`;
 				entry.style.backgroundPosition = "center center";
 				entry.style.backgroundRepeat = "no-repeat";
+				let caption = document.createElement("div");
+				caption.innerHTML = arr[1];
+				entry.appendChild(caption);
 				gallery.appendChild(entry);
 			});
 			
