@@ -13,7 +13,7 @@ body {
 	width: 100%;
 	height: 100%;
 	overflow-y: hidden;
-	background-image: url("mainbg2.jpg");
+	background-image: url("mainbg.jpg");
 	background-position: top center;
 	background-attachment: fixed;
 }
