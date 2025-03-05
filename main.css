@@ -79,6 +79,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	font-family: "Play Regular";
 	justify-content: center;
 }
 
@@ -97,7 +98,6 @@ section div {
 }
 
 section div div {
-	font-family: "Play Regular";
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -137,7 +137,7 @@ section div div ul {
 }
 
 section div div ul li {
-	margin: 5px 15px;
+	margin: 7px 15px;
 }
 
 /*
@@ -153,7 +153,6 @@ Front-page specifics
 #main-section p {
 	width: 400px;
 	font-size: 14px;
-	font-family: "Play Regular";
 	line-height: 2em;
 	backdrop-filter: brightness(70%);
 	border-radius: 5px;
@@ -188,4 +187,32 @@ section#gallery-section div div.gallery-entry div {
 	position: absolute;
 	bottom: 0;
 	padding: 5px;
+}
+
+/*
+Resources specifics
+*/
+
+section#resources-section div {
+	width: 800px;
+	height: 75%;
+	display: inline;
+	backdrop-filter: brightness(40%);
+	padding: 10px;
+	border-radius: 5px;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+}
+
+section#resources-section div ul {
+	width: fit-content;
+}
+
+section#resources-section div ul li {
+	margin: 5px 15px;
+}
+
+section#resources-section div a {
+	color: #ffffff;
 }
