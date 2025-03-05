@@ -194,37 +194,53 @@
 			let entries = document.getElementById("gallery-section").children[0].children;
 			let viewingEntry = 0;
 
+			function shiftRight() {
+				if (viewingEntry > 0) {
+					viewingEntry--;
+					gallery.scrollTo(
+						{
+							left: Array.from(entries).reduce(
+								(acc, cur, i) => acc + (i < viewingEntry ? entries[i].scrollWidth : 0),
+								0
+							),
+							behavior: "smooth"
+						}
+					);
+				}
+			}
+
+			function shiftLeft() {
+				if (viewingEntry < entries.length - 1) {
+					viewingEntry++;
+					gallery.scrollTo(
+						{
+							left: Array.from(entries).reduce(
+								(acc, cur, i) => acc + (i < viewingEntry ? entries[i].scrollWidth : 0),
+								0
+							),
+							behavior: "smooth"
+						}
+					);
+				}
+			}
+
 			window.onkeydown = (event) => {
 				if (event.keyCode === 37) {
 					event.preventDefault();
-					console.log("Left pressed");
-					if (viewingEntry > 0) {
-						viewingEntry--;
-						gallery.scrollTo(
-							{
-								left: Array.from(entries).reduce(
-									(acc, cur, i) => acc + (i < viewingEntry ? entries[i].scrollWidth : 0),
-									0
-								),
-								behavior: "smooth"
-							}
-						);
-					}
+					shiftRight();
 				} else if (event.keyCode === 39) {
 					event.preventDefault();
-					console.log("Right pressed");
-					if (viewingEntry < entries.length - 1) {
-						viewingEntry++;
-						gallery.scrollTo(
-							{
-								left: Array.from(entries).reduce(
-									(acc, cur, i) => acc + (i < viewingEntry ? entries[i].scrollWidth : 0),
-									0
-								),
-								behavior: "smooth"
-							}
-						);
-					}
+					shiftLeft();
+				}
+			};
+
+			gallery.onclick = event => {
+				let rect = gallery.getBoundingClientRect();
+				let mid = rect.left + rect.width/2;
+				if (event.clientX < mid) {
+					shiftRight();
+				} else {
+					shiftLeft();
 				}
 			};
 
