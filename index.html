@@ -5,6 +5,10 @@
 </head>
 <body>
 	<script language="javascript">
+
+		/*
+		Function to put the relevant section into view
+		*/
 		function viewSection(key) {
 			document.getElementsByTagName("section")[key].scrollIntoView({ behavior: "smooth" });
 		}
@@ -25,14 +29,28 @@
 		};
 
 	</script>
+	<!---
+	Navbar: Links are added according to the section tags 
+	that have been inserted into the page, taking the 
+	link text from the name property		
+	-->
 	<header id="navbar"></header>
 	<section id="main-section" name="Main">
+			<!---
+			Header and a brief introductory text
+			-->
 			<h1>Mars</h1>
 			<p>A planet once not too different from our own, this rock now seemingly only carries life in fiction. Nonetheless, for millennia it has played cultural role nearly unequaled, and with developments in science and technology has been the subject of ever-increasing amounts of study, as well as a favoured candidate to become a new world.</p>
 	</section>
 	<section id="about-section" name="about">
+		<!---
+		Information, historic and cultural	
+		-->
 		<div>
 			<div class="text">
+				<!---
+				Informational text
+				-->
 				<p>Mars is the fourth planet from the Sun counting outwards, and the second-to-smallest. It is a rocky planet, easily recognizable by its reddish colour, which may even be noticed when viewed in the night sky from Earth.</p>
 				<h3>Prehistoric interest</h3>
 				<p>Its modern name comes from the Roman god of war, likely due to its colour being easily associated with blood. Being easily visible and recognizable in the sky, however, its motion is attested to have been observed and recorded by the ancient Egyptians more than 4000 years ago (over a thousand years before the founding of Rome). The Babylonians as well, around 600 BC, themselves presumably making note of its colour, associated it with the god of war, death and decease, Nergal. They also made systematic observations of its orbit, even inventing mathematical techniques to compute corrections to the predicted orbit.</p>
@@ -45,6 +63,9 @@
 				<p>At the same time, others wish to go beyond the goals of NASA's Mars Exploration Program, and work towards the ability to not just send manned missions to Mars, but to bring along enough equipment and resources for a prolonged stay and eventual settlement. This is the ambition of the Texas-based space and telecommunications company SpaceX, who for nearly two decades have made themselves noteworthy for their development in rocket technology and their applications of them. Results on Mars emigration are still on hold.</p>
 			</div>
 			<div id="about-pics" class="pictures">
+				<!---
+				Illustrations to the informational text
+				-->
 				<div class="image"><div>A rover's selfie. (Image: NASA)</div></div>
 				<div class="image"><div>Mars, and others, visible in the sky. (Image: WDBJ7)</div></div>
 				<div class="image"><div>Spaceship en route (stylized)</div></div>
@@ -53,7 +74,6 @@
 					/*
 					Add pictures
 					*/
-
 					[
 						"./roverselfie.jpg",
 						"./marsinthesky_wdbj7.avif",
@@ -93,8 +113,14 @@
 		</div>
 	</section>
 	<section id="facts-section" name="Facts">
+		<!---
+		Listed facts about Mars and various of its aspects	
+		-->
 		<div>
 			<div class="text">
+				<!---
+				Fact list
+				-->
 				<ul>
 					<li>Mars was formed approximately 4.5 billion years ago, at the same time as the other planets of the solar system. It is one of four planets of the Solar System classified as a terrestrial (rocky) planet (along with Mercury, Venus and Earth);</li>
 					<li>Its diameter is around 6,800 km, roughly half that of the Earth (about 12,800 km). It is the second smallest planet overall (the smallest is Mercury, with a diameter of 4,900 km);</li>
@@ -111,6 +137,9 @@
 				</ul>
 			</div>
 			<div id="facts-pics" class="pictures">
+				<!---
+				Illustrations to the listed facts
+				-->
 				<div class="image"><div>Northern polar ice cap. (Image: NASA)</div></div>
 				<div class="image"><div>Image of the surface, with rover tracks. (Image: NASA)</div></div>
 				<div class="image"><div>Mars in profile</div></div>
@@ -158,14 +187,17 @@
 			</div>
 		</div>
 	</section>
+	<!---
+	Gallery section: browse through photos using either the left and right 
+	arrow keys, or clicking on the left or right side
+	-->
 	<section id="gallery-section" name="Gallery">
-		<div></div>
+		<div><!---Images go here--></div>
 		<script language="javascript">
 
 			/*
 			Add gallery entries
 			*/
-
 			let gallery = document.getElementById("gallery-section").children[0];
 
 			[
@@ -194,8 +226,11 @@
 			let entries = document.getElementById("gallery-section").children[0].children;
 			let viewingEntry = 0;
 
+			/*
+			Function to shift the image reel to the right
+			*/
 			function shiftRight() {
-				if (viewingEntry > 0) {
+				if (viewingEntry > 0) {		// If we are not at the far-left end
 					viewingEntry--;
 					gallery.scrollTo(
 						{
@@ -209,8 +244,11 @@
 				}
 			}
 
+			/*
+			Function to shift the image reel to the left
+			*/
 			function shiftLeft() {
-				if (viewingEntry < entries.length - 1) {
+				if (viewingEntry < entries.length - 1) {		// If we are not at the far-right end
 					viewingEntry++;
 					gallery.scrollTo(
 						{
@@ -224,6 +262,10 @@
 				}
 			}
 
+			/*
+			Shift left or right if the left or right arrow key, respectively,
+			is pushed down
+			*/
 			window.onkeydown = (event) => {
 				if (event.keyCode === 37) {
 					event.preventDefault();
@@ -234,6 +276,10 @@
 				}
 			};
 
+			/*
+			Shift left or right if the left or right side, respectively,
+			of the gallery box is clicked
+			*/
 			gallery.onclick = event => {
 				let rect = gallery.getBoundingClientRect();
 				let mid = rect.left + rect.width/2;
@@ -246,6 +292,9 @@
 
 		</script>
 	</section>
+	<!---
+	Resources: links to other sites
+	-->
 	<section id="resources-section" name="Resources">
 		<div>
 			Information:
