@@ -50,13 +50,15 @@
 				<div class="image"><div>Spaceship en route (stylized)</div></div>
 				<script language="javascript">
 
-					let aboutImgURLs = [
+					/*
+					Add pictures
+					*/
+
+					[
 						"./roverselfie.jpg",
 						"./marsinthesky_wdbj7.avif",
 						"./spaceship.jpg"
-					]
-
-					for (let [i, url] of aboutImgURLs.entries()) {
+					].forEach((url, i) => {
 						let imgDiv = document.getElementById("about-pics").children[i];
 						imgDiv.style.backgroundImage = `url(${url})`;
 						imgDiv.style.backgroundSize = "cover";
@@ -84,7 +86,7 @@
 								imgDiv.style.left = "510";
 								break;
 						}
-					}
+					});
 
 				</script>
 			</div>
@@ -114,13 +116,15 @@
 				<div class="image"><div>Mars in profile</div></div>
 				<script language="javascript">
 
+					/*
+					Add pictures
+					*/
+
 					let factsImgURLs = [
 						"./northernpolaricecap.jpg",
 						"./surfaceofmars.webp",
 						"./justmars.jpg"
-					];
-
-					for (let [i, url] of factsImgURLs.entries()) {
+					].forEach((url, i) => {
 						let imgDiv = document.getElementById("facts-pics").children[i];
 						imgDiv.style.backgroundImage = `url(${url})`;
 						imgDiv.style.backgroundSize = "cover";
@@ -148,25 +152,37 @@
 								imgDiv.style.left = "510";
 								break;
 						}
-					}
+					});
 
 				</script>
 			</div>
 		</div>
 	</section>
 	<section id="gallery-section" name="Gallery">
-		<div>
-			<div class="gallery-entry">image 1</div><div class="gallery-entry">image 2</div><div class="gallery-entry">image 3</div><div class="gallery-entry">image 4</div><div class="gallery-entry">image 5</div><div class="gallery-entry">image 6</div>
-		</div>
+		<div></div>
 		<script language="javascript">
 
-			let gallery = document.getElementById("gallery-section").children[0]
+			/*
+			Add gallery entries
+			*/
+
+			let gallery = document.getElementById("gallery-section").children[0];
+
+			[
+				"./withpolaricecaps.jpg",
+				"./perseverance.png",
+				"./marscoral.jpg"
+			].forEach((url, i) => {
+				let entry = document.createElement("div");
+				entry.className = "gallery-entry";
+				entry.style.backgroundImage = `url("${url}")`;
+				entry.style.backgroundPosition = "center center";
+				entry.style.backgroundRepeat = "no-repeat";
+				gallery.appendChild(entry);
+			});
+			
 			let entries = document.getElementById("gallery-section").children[0].children;
 			let viewingEntry = 0;
-
-			Array.from(entries).forEach(el => {
-				el.style.backgroundColor = [ "red", "orange", "yellow", "green", "blue", "indigo", "violet" ][Math.floor(Math.random()*6)]
-			});
 
 			window.onkeydown = (event) => {
 				if (event.keyCode === 37) {
